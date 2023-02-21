@@ -1,9 +1,24 @@
 ﻿// задача про двух друзей и собаку
-int friend1speed = 1, friend2speed = 2, dogspeed = 5, count = 0, toWhom = 2;
-double time = 0, dist = 10000, meet = 10;
-while (dist < meet)
+Console.Write ("Введите скорость первого друга (м/с): ");
+string fr1 = Console.ReadLine();
+int friend1speed = Convert.ToInt32(fr1);
+Console.Write ("Введите скорость второго друга (м/с): ");
+string fr2 = Console.ReadLine();
+int friend2speed = Convert.ToInt32(fr2);
+Console.Write ("Введите скорость собаки (м/с): ");
+string dog = Console.ReadLine();
+int dogspeed = Convert.ToInt32(dog);
+Console.Write ("Введите расстояние между друзьями (м): ");
+string distin = Console.ReadLine();
+Double dist = Convert.ToDouble(distin);
+Console.Write ("Введите расстояние встречи (м): ");
+string meetin = Console.ReadLine();
+Double meet = Convert.ToDouble(meetin);
+int count = 0, toWhom = 2;
+Double time = 0;
+while (dist > meet)
 {
-    if (toWhom = 1)
+    if (toWhom == 1)
         {
         time = dist/(friend1speed + dogspeed);
         toWhom = 2;
@@ -14,6 +29,6 @@ while (dist < meet)
         toWhom = 1;    
         }
         dist = dist - (friend1speed + friend2speed)*time;
-        count++;
+        count = count + 1;
 }    
 Console.WriteLine(count);
