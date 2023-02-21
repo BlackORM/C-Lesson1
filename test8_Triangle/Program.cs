@@ -1,19 +1,21 @@
 ﻿// Ставим точки в середине отрезка
 Console.Clear();
-int xa = 45, ya = 1, 
-    xb = 1, yb = 30, 
-    xc = 90, yc = 30;
+int xa = 20;
+int ya = 1;
+int xb = 1;
+int yb = 20;
+int xc = 40;
+int yc = 20;
 Console.SetCursorPosition(xa, ya);
 Console.WriteLine("*");
 Console.SetCursorPosition(xb, yb);
 Console.WriteLine("*");
 Console.SetCursorPosition(xc, yc);
 Console.WriteLine("*");
-
 int x = xa, y = ya, count=0;
-while(count<100)
+while (count < 10000)
 {
-    int newdot = Random().Next(0, 3);
+    int newdot = new Random().Next(0, 3);
     if (newdot == 0)
         {
             x=(x + xa) / 2;
