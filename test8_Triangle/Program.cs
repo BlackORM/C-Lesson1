@@ -1,11 +1,10 @@
 ﻿// Ставим точки в середине отрезка
 Console.Clear();
-int xa = 20;
-int ya = 1;
-int xb = 1;
-int yb = 20;
-int xc = 40;
-int yc = 20;
+Console.Write ("Введите количество точек: ");
+string num = Console.ReadLine();
+int numdots = Convert.ToInt32(num);
+int xa = 20, ya = 1, xb = 1, yb = 20, xc = 40, yc = 20;
+Console.Clear();
 Console.SetCursorPosition(xa, ya);
 Console.WriteLine("*");
 Console.SetCursorPosition(xb, yb);
@@ -13,7 +12,7 @@ Console.WriteLine("*");
 Console.SetCursorPosition(xc, yc);
 Console.WriteLine("*");
 int x = xa, y = ya, count=0;
-while (count < 10000)
+while (count < numdots)
 {
     int newdot = new Random().Next(0, 3);
     if (newdot == 0)
